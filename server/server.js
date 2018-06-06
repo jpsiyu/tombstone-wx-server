@@ -74,7 +74,7 @@ app.delete('/api/delete', (req, res) => {
     stone.deleteStone(req, res, database)
 })
 
-app.get('/api/openId', (req, res) => {
+app.get('/api/openid', (req, res) => {
     const code = req.query.code
     const data = {
         appid: 'wx2c7cf40466bd799e',

@@ -111,6 +111,7 @@ const stoneSchema = mongoose.Schema({
     name: String,
     age: Number,
     location: [Number],
+    locationName: String,
 })
 const User = mongoose.model('User', userSchema)
 const Stone = mongoose.model('Stone', stoneSchema)
