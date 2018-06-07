@@ -8,7 +8,6 @@ const getStones = (req, res, database) => {
 }
 
 const checkStone = (req) => {
-    console.log('checkStone',req.body)
     req.check('name', 'name len [1, 20]').isLength({min:1, max:20})
     req.check('owner', 'owner should set').notEmpty()
     req.check('age', 'age between 1 and 130').isInt({min:1, max:130})
@@ -42,8 +41,8 @@ const addStone = (req, res, database) => {
 }
 
 const deleteStone = (req, res, database) => {
-    const id = req.query._id
-    const owner = req.user._id
+    const id = req.body.stoneid
+    const owner = req.body.owner
     const deleteSucc = () => common.serverMsg(res, 200, true, {message: 'ok'}, null)
     database.deleteStoneById(id, owner, deleteSucc, ()=>common.serverErrMsg(res))
 }
