@@ -4,7 +4,7 @@
   "description": "tombstone records for wx mini program",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

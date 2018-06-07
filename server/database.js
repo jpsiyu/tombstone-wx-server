@@ -16,7 +16,8 @@ class Database {
 
     // connect to database
     connect(callback){
-        mongoose.connect('mongodb://localhost/tombstone-wx')
+        //mongoose.connect('mongodb://localhost/tombstone-wx')
+        mongoose.connect('mongodb://jpsiyu:123456Tombstone@ds151530.mlab.com:51530/tombstone')
         this.db = mongoose.connection
         this.db.on('error', err => this.err(err))
         this.db.on('open', () => {
